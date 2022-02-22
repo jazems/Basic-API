@@ -17,8 +17,8 @@ def index():
     if request.method == 'POST':
         try:
             title = task['title']
-            
-            if task['is_completed']:
+
+            if 'is_completed' in task:
                 is_completed = task['is_completed']
             else:
                 is_completed = False
